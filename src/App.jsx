@@ -1,1 +1,1 @@
-export { default } from "./src/App.jsx";
+export { default } from "./App.vite.jsx";
