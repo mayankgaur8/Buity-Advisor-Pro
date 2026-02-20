@@ -348,6 +348,50 @@ export default function App() {
 			{/* ── RESULTS ──────────────────────────────────────────────────────── */}
 			{screen === "results" && results && (
 				<div style={s.resultsPage}>
+					{screen === "results" && results && (
+  <div style={s.resultsPage}>
+
+    {/* ── FLOATING HOME BUTTON ── */}
+    <button
+      className="homeBtn"
+      onClick={() => {
+        setScreen("landing");
+        setResults(null);
+        setPhotoPreview(null);
+        setGender(null);
+        setSelectedPlan(null);
+        setActiveTab("products");
+      }}
+      style={{
+        position: "fixed",
+        top: "20px",
+        left: "20px",
+        zIndex: 999,
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+        padding: "10px 18px",
+        background: "linear-gradient(135deg, rgba(192,132,252,0.15), rgba(192,132,252,0.05))",
+        border: "1.5px solid rgba(192,132,252,0.5)",
+        borderRadius: "50px",
+        color: "#c084fc",
+        fontSize: "14px",
+        fontWeight: "600",
+        cursor: "pointer",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        transition: "all 0.3s ease",
+        letterSpacing: "0.3px",
+      }}
+    >
+      <span style={{ fontSize: "18px" }}>🏠</span>
+      <span>Home</span>
+    </button>
+
+    {/* ...existing code... */}
+  </div>
+)}
+
 					{/* Header */}
 					<div style={s.resultsHero}>
 						<div style={s.resultsPhotoWrap}>
@@ -576,6 +620,22 @@ const CSS = `
   @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
   button { cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.22s; }
   button:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  @keyframes homeBtn {
+  0% { box-shadow: 0 0 0 0 rgba(192,132,252,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(192,132,252,0); }
+  100% { box-shadow: 0 0 0 0 rgba(192,132,252,0); }
+}
+
+.homeBtn {
+  animation: homeBtn 2s infinite;
+}
+.homeBtn:hover {
+  transform: translateY(-3px) scale(1.07) !important;
+  box-shadow: 0 8px 32px rgba(192,132,252,0.45) !important;
+}
+.homeBtn:active {
+  transform: scale(0.96) !important;
+}
 `;
 
 // ─── Style Objects ────────────────────────────────────────────────────────────
