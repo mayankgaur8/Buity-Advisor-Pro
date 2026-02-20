@@ -13,4 +13,6 @@ dist/
 .env.local
 
 # Log files
-*.log
+*.lognode_modules/
+dist/
+.vite/
