@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-export { default } from "./App.vite.jsx";
-=======
 import React, { useState, useRef, useCallback } from "react";
-import logo from "../assets/Avantika-Buity-Pro.png";
-
+import logo from "./assets/Avantika-Buity-Pro.png";
 // ─── Subscription Plans ───────────────────────────────────────────────────────
 const PLANS = [
 	{
@@ -752,4 +748,4 @@ const s = {
 	subDisclaimer: { textAlign: "center", fontSize: "12px", color: "rgba(240,234,245,0.3)", marginBottom: "24px" },
 	restartBtn: { background: "transparent", border: "none", color: "rgba(240,234,245,0.35)", fontSize: "13px", padding: "8px 0", width: "100%", textAlign: "center" },
 };
->>>>>>> 55d6891 (Landing: show PNG logo with styled AVANTIKA Buity‑Pro brand (script font))
+
